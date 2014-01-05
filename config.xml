@@ -7,11 +7,17 @@
     <author email="hello@williamagay.com" href="http://williamagay.com/">
         William AGAY
     </author>
-    <access origin="*" />
-    <gap:plugin name="com.phonegap.plugins.Social" />
-    <preference name="fullscreen" value="true" />
+    <access origin="api.fiveseconds.me" />
+
+    <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="HideKeyboardFormAccessoryBar" value="true" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="target-device" value="universal" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="exit-on-suspend" value="true" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="permissions" value="none"/>
 </widget>
