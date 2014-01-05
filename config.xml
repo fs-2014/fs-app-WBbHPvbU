@@ -13,6 +13,11 @@
         </author>
         <access origin="http://fiveseconds.me" />
 
+        <feature name="http://api.phonegap.com/1.0/geolocation"/>
+        <feature name="http://api.phonegap.com/1.0/camera"/>
+        <feature name="http://api.phonegap.com/1.0/media"/>
+        <feature name="http://api.phonegap.com/1.0/network"/>
+
         <preference name="fullscreen" value="false" />
         <preference name="webviewbounce" value="true" />
         <preference name="DisallowOverscroll" value="true" />
