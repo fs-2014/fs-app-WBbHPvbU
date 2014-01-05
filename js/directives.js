@@ -1,7 +1,7 @@
 'use strict';
 
 /* Directives */
-var myModule = angular.module('myApp.directives', []);
+var myModule = angular.module('fiveseconds.directives', []);
 
 
 myModule.directive('player', ['version', function() {

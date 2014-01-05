@@ -3,8 +3,8 @@
 /* Main Services */
 
 // Simple value service.
-angular.module('myApp.services', []).
-  value('version', '0.1');
+angular.module('fiveseconds.services', []).
+  value('version', '1.5');
 
 myApp.factory('phonegapReady', function() {
     return function (fn) {

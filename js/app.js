@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('myApp', ['myApp.services', 'localization', 'apiCalls', 'myApp.directives','ajoslin.mobile-navigate','ngMobile'])
+var myApp = angular.module('fiveseconds', ['fiveseconds.services', 'localization', 'apiCalls', 'fiveseconds.directives','ajoslin.mobile-navigate','ngMobile'])
     .config(function ($compileProvider){
         $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
     })
