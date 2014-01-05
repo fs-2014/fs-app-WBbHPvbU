@@ -1,0 +1,26 @@
+<div class="body loginview" ng-controller="loginCtrl">
+	<div class="navbar absolute">
+		<div class="back left" ng-click="$navigate.back()"><img src="img/back.png" /></div>
+		<div class="title">{{ title }}</div>
+	</div>
+	
+	<div class="view">
+		<div class="row">
+			<div class="seven columns email centered">
+				<input placeholder="{{ '_emailaddress_'|i18n }}" type="text" ng-model="email" ng-class="emailClass" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="seven columns login centered">
+				<button ng-click="auth()">{{ '_login_'|i18n }}</button>
+			</div>
+		</div>
+
+		<div class="row" style="padding-top: 30px;">
+			<div class="seven columns centered">
+				{{ '_terms_'|i18n }}
+			</div>
+		</div>
+	</div>
+</div>

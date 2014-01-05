@@ -1,0 +1,31 @@
+<div class="body discover" ng-controller="discoverCtrl">
+	<div class="navbar">
+		<div class="title">{{ title }}</div>
+	</div>
+	
+	<div class="view">
+		<div class="row">
+			<div class="ten columns centered">
+			
+				<div class="video" ng-repeat="video in discover" ng-click="openPlay(video.url_video, video.thumb_video, video.date_video, video.feeling_video)">
+					<div class="thumb">
+						<div class="thumb-img" style="background-image:url({{ video.thumb_video }});">
+							<div class="play-btn">
+								<img alt="Play" src="img/play.png" height="48" width="48" />
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	
+	<div class="tabbar">
+		<div class="tabs">
+			<div class="tab" ng-click="$navigate.go('/record','none')"><div class="img-block"><img src="img/tabbar-record.png" /></div><div class="text-block">{{ '_record_'|i18n }}</div></div>
+			<div class="tab active"><div class="img-block"><img src="img/tabbar-discover.png" /></div><div class="text-block">{{ '_discover_'|i18n }}</div></div>
+			<div class="tab timeline" ng-click="$navigate.go('/timeline','none')"><div class="img-block"><img src="img/tabbar-timeline.png" /></div><div class="text-block">{{ '_timeline_'|i18n }}</div></div>
+		</ul>
+	</div>
+</div>

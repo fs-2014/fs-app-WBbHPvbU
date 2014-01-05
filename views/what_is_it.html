@@ -1,0 +1,21 @@
+<div class="body what_is_it" ng-controller="what_is_itCtrl">
+		<div class="row">
+			<div class="centered seven columns logo-container">
+				<img alt="logo" class="logo-img" src="img/app-logo.png" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="centered ten columns">				
+				<p class="description">
+					{{ '_description_'|i18n }}
+				</p>
+			</div>
+		</div>
+		
+		<div class="row">
+				<div class="ten columns letsgo centered">
+					<button ng-click="$navigate.go('/login')">{{ '_letsgo_'|i18n }}</button>
+				</div>
+		</div>
+	
+</div>

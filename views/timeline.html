@@ -1,0 +1,46 @@
+<div class="body timeline" ng-controller="timelineCtrl">
+	<div class="navbar absolute">
+		<div class="previous left" ng-class="displayPrevious" ng-click="previousElement()"><img src="img/previous.png" /></div>
+		<div class="title">{{ title }}</div>
+		<div class="next right" ng-class="displayNext" ng-click="nextElement()"><img src="img/next.png" /></div>
+	</div>
+	
+	<div class="view">
+		<div class="row">
+			<div class="ten columns centered">
+				<div class="row">
+					<div class="eight columns">
+						<div class="playerContainer">
+							<div class="videoContainer">
+								<video class="player" preload="auto" poster="{{ current.thumb_video }}">
+									<source src="{{ current.url_video }}" type="video/mp4" />
+								</video>
+							</div>
+							<div class="controls">
+								<img alt="Play" src="img/play.png" class="play-btn playpause play" />
+							</div>
+						</div>
+					</div>
+					<div class="four columns meta">
+
+						<div class="date">
+					 		{{ current.date_video | date:'EEEE, d MMMM yyyy'}}
+						</div>
+
+						<div class="share">
+							<button ng-click="Share(current.raw_video)">Share your video</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="tabbar">
+		<div class="tabs">
+			<div class="tab" ng-click="$navigate.go('/record','none')"><div class="img-block"><img src="img/tabbar-record.png" /></div><div class="text-block">{{ '_record_'|i18n }}</div></div>
+			<div class="tab" ng-click="$navigate.go('/discover','none')"><div class="img-block"><img src="img/tabbar-discover.png" /></div><div class="text-block">{{ '_discover_'|i18n }}</div></div>
+			<div class="tab active timeline"><div class="img-block"><img src="img/tabbar-timeline.png" /></div><div class="text-block">{{ '_timeline_'|i18n }}</div></div>
+		</ul>
+	</div>
+</div>

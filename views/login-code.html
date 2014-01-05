@@ -1,0 +1,30 @@
+<div class="body discover" ng-controller="loginCodeCtrl">
+	<div class="navbar absolute">
+		<div class="back left" ng-click="$navigate.back()"><img src="img/back.png" /></div>
+		<div class="title">{{ title }}</div>
+	</div>
+	
+	<div class="view">
+		<div class="row">
+			<div class="seven columns explanations centered">
+				<p>
+					{{ '_loginCodeDescription_'|i18n }}
+				</p>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="two columns code_input centered">
+				<input type="text" maxlength="4" ng-model="code_login" class="code_login" placeholder="{{ '_code_'|i18n }}" ng-class="codeClass" />
+			</div>
+		</div>
+		
+		<br/><br/><br/>
+		
+		<div class="row">
+			<div class="seven columns login centered">
+				<button ng-click="verify()">{{ '_login_'|i18n }}</button>
+			</div>
+		</div>
+	</div>
+</div>

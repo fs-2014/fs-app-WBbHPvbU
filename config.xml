@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.williamagay.fiveseconds" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>FiveSeconds</name>
+    <description>
+        Because each day is unforgettable.
+    </description>
+    <author email="hello@williamagay.com" href="http://williamagay.com/">
+        William AGAY
+    </author>
+    <access origin="*" />
+    <gap:plugin name="com.phonegap.plugins.Social" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+</widget>

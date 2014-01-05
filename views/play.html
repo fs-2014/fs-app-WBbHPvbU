@@ -1,0 +1,31 @@
+<div class="body play" ng-controller="playCtrl">
+	<div class="navbar absolute">
+		<div class="back left" ng-click="$navigate.back()"><img src="img/back.png" /></div>
+		<div class="title">{{ title }}</div>
+	</div>
+	
+	<div class="view">
+		<div class="row">
+			<div class="ten columns centered">
+				<div class="playerContainer">
+					<video class="player" preload="auto">
+						<source src="{{ current.url }}" type="video/mp4" />
+					</video>
+					<div class="controls">
+						<img alt="Play" src="img/play.png" class="play-btn playpause play" />
+					</div>
+				</div>
+				
+				<div class="meta">
+					<div class="date">
+				 		{{ current.date | date:'EEEE, d MMMM yyyy'}}
+					</div>
+					<br/><br/>
+					<div class="date">
+				 		<span ng-click="Report()">{{ '_report_'|i18n }}<span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+
+        <!-- Cordova -->
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <!-- Use the .min version of bootstrap files in production -->
+        <!-- Use the following if you want to use responsive design -->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/gumby-girds.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/mobile-nav.css" />
+
+        <script src="lib/jquery-2.0.3.min.js"></script>
+        
+        <title>Five Seconds</title>
+
+        <script type="text/javascript" charset="utf-8">
+        $(function(){
+
+            // Wait for device API libraries to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // device APIs are available
+            //
+            function onDeviceReady() {
+                checkConnection();
+
+                window.setInterval(checkConnection, 500);
+            }
+
+            function checkConnection() {
+                    
+                var networkState = navigator.connection.type;
+
+                var states = {};
+                    states[Connection.UNKNOWN]  = 0;
+                    states[Connection.ETHERNET] = 1;
+                    states[Connection.WIFI]     = 1;
+                    states[Connection.CELL_2G]  = 0;
+                    states[Connection.CELL_3G]  = 1;
+                    states[Connection.CELL_4G]  = 1;
+                    states[Connection.CELL]     = 1;
+                    states[Connection.NONE]     = 0;
+
+                if(!states[networkState]){
+                    $('.no-connection').fadeIn();
+                }
+                else{
+                    $('.no-connection').fadeOut();
+                }
+
+                return states[networkState];
+            }
+        });
+        </script>
+    </head>
+    
+    <body>
+
+        <div class="no-connection">
+            <div class="row">
+                <div class="centered seven columns logo-container">
+                    <img alt="logo" class="logo-img" src="img/app-logo.png" />
+                </div>
+
+                <div class="centered seven columns title">
+                    <h1>{{ '_networkcheck_'|i18n }}</h1>
+                </div>
+
+                <div class="centered seven columns retry">
+                    <div class="bubblingG">
+                        <span id="bubblingG_1">
+                        </span>
+                        <span id="bubblingG_2">
+                        </span>
+                        <span id="bubblingG_3">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading">
+                    <div class="bubblingG">
+                        <span id="bubblingG_1">
+                        </span>
+                        <span id="bubblingG_2">
+                        </span>
+                        <span id="bubblingG_3">
+                        </span>
+                    </div>
+        </div>
+
+        <!-- The following tag is in place of ng-view to use the angular mobile view navigation framework
+            https://github.com/ajoslin/angular-mobile-nav
+        -->
+        <mobile-view/>
+
+        <!-- Comment out the following 2 lines to test on the browser-->
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <!-- In production use min versions -->
+
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-mobile.min.js"></script>
+        <script src="lib/mobile-nav.min.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/localization.js"></script>
+        <script src="js/apicalls.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<div class="body record" ng-controller="recordCtrl">
+	<div class="navbar">
+		<div class="title">{{ '_record_'|i18n }}</div>
+	</div>
+	
+	<div class="view">
+		<div class="row">
+			<div class="four columns centered record-btn">
+				<img alt="Record" src="img/record-btn.png" />
+			</div>
+			
+			<div class="five columns centered button-record">
+				<button ng-click="recorder()" ng-class="btnClass">{{ btnText }}</button>
+			</div>
+
+			<div class="four columns centered message-record" ng-class="messageClass">
+				<h2 class="message">
+					{{ message }}
+				</h2>
+			</div>
+		</div>
+	</div>
+	
+	<div class="tabbar">
+		<div class="tabs">
+			<div class="tab active"><div class="img-block"><img src="img/tabbar-record.png" /></div><div class="text-block">{{ '_record_'|i18n }}</div></div>
+			<div class="tab" ng-click="$navigate.go('/discover','none')"><div class="img-block"><img src="img/tabbar-discover.png" /></div><div class="text-block">{{ '_discover_'|i18n }}</div></div>
+			<div class="tab timeline" ng-click="$navigate.go('/timeline','none')"><div class="img-block"><img src="img/tabbar-timeline.png" /></div><div class="text-block">{{ '_timeline_'|i18n }}</div></div>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="body upload" ng-controller="uploadCtrl">
+	<div class="navbar">
+		<div class="title">{{ title }}</div>
+		<div class="next right no-design loader"><img src="img/loader.gif" /></div>
+	</div>
+	
+	<div class="view">
+
+		<div class="thumbContainer">
+			<div class="thumbContainer-img">
+				<h2 class="uploadStatus">{{ uploadStatus }}</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="ten columns centered share">
+				<button ng-click="Share()" class="not-ready">{{ '_share_'|i18n }}</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="tabbar">
+		<div class="tabs">
+			<div class="tab active"><div class="img-block"><img src="img/tabbar-record.png" /></div><div class="text-block">{{ '_record_'|i18n }}</div></div>
+			<div class="tab" ng-click="$navigate.go('/discover','none')"><div class="img-block"><img src="img/tabbar-discover.png" /></div><div class="text-block">{{ '_discover_'|i18n }}</div></div>
+			<div class="tab timeline" ng-click="$navigate.go('/timeline','none')"><div class="img-block"><img src="img/tabbar-timeline.png" /></div><div class="text-block">{{ '_timeline_'|i18n }}</div></div>
+		</ul>
+	</div>
+</div>
