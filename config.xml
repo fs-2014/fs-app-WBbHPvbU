@@ -1,40 +1,44 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.williamagay.fiveseconds" version="1.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>FiveSeconds</name>
-    <description>
-        Because each day is unforgettable.
-    </description>
-    <author email="hello@williamagay.com" href="http://williamagay.com/">
-        William AGAY
-    </author>
-    <access origin="http://fiveseconds.me" />
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.williamagay.fiveseconds"
+        version     = "1.5.0" >
 
-    <preference name="fullscreen" value="false" />
-    <preference name="webviewbounce" value="true" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="HideKeyboardFormAccessoryBar" value="true" />
-    <preference name="ios-statusbarstyle" value="black-opaque" />
-    <preference name="phonegap-version" value="2.9.0" />
-    <preference name="target-device" value="universal" />
-    <preference name="prerendered-icon" value="true" />
-    <preference name="exit-on-suspend" value="false" />
-    <preference name="android-installLocation" value="auto" />
-    <preference name="permissions" value="none"/>
-    <preference name="target-device" value="universal" />
-    <preference name="detect-data-types" value="true" />
+        <name>FiveSeconds</name>
+        <description>
+            Because each day is unforgettable.
+        </description>
+        <author email="hello@williamagay.com" href="http://williamagay.com/">
+            William AGAY
+        </author>
+        <access origin="http://fiveseconds.me" />
 
-    <icon src="icon.png" />
+        <preference name="fullscreen" value="false" />
+        <preference name="webviewbounce" value="true" />
+        <preference name="DisallowOverscroll" value="true" />
+        <preference name="HideKeyboardFormAccessoryBar" value="true" />
+        <preference name="ios-statusbarstyle" value="black-opaque" />
+        <preference name="phonegap-version" value="2.9.0" />
+        <preference name="target-device" value="universal" />
+        <preference name="prerendered-icon" value="true" />
+        <preference name="exit-on-suspend" value="false" />
+        <preference name="android-installLocation" value="auto" />
+        <preference name="permissions" value="none"/>
+        <preference name="target-device" value="universal" />
+        <preference name="detect-data-types" value="true" />
 
-    <icon src="res/icon/ios/icon-57.png" gap:platform="ios" width="57" height="57" />
-    <icon src="res/icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
-    <icon src="res/icon/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114" />
-    <icon src="res/icon/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
+        <icon src="icon.png" />
 
-    <icon src="res/icon/android/mdpi.png" gap:platform="android" gap:density="ldpi" />
-    <icon src="res/icon/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
-    <icon src="res/icon/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-    <icon src="res/icon/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+        <icon src="res/icon/ios/icon-57.png" gap:platform="ios" width="57" height="57" />
+        <icon src="res/icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+        <icon src="res/icon/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114" />
+        <icon src="res/icon/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
 
-    <icon src="res/icon/winphone/icon.png" gap:platform="winphone" />
-    <icon src="res/icon/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
-</widget>
+        <icon src="res/icon/android/mdpi.png" gap:platform="android" gap:density="ldpi" />
+        <icon src="res/icon/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+        <icon src="res/icon/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+        <icon src="res/icon/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+        <icon src="res/icon/winphone/icon.png" gap:platform="winphone" />
+        <icon src="res/icon/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
+    </widget>
